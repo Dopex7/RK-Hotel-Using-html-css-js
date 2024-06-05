@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RKHotel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+ 
+</head>
+<body>
+    
+    <header>
+        <div class="content flex_space">
+            <div class="logo">
+                <img src="/image/rkhotel-high-resolution-logo-black-transparent (2).png" alt="">
+            </div>
+            <div class="navlinks">
+                <ul id="menulist">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#rooms">rooms</a></li>
+                    <li><a href="#pages">pages</a></li>
+                    <li><a href="#news">news</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <li> <i class="fa fa-search"></i></li>
+                    <li> <button class="primary-btn">BOOK NOW</button></li>
+                </ul>
+                <span class="fa fa-bars" onclick="menutoggle()"></span>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        var menulist = document.getElementById('menulist');
+        menulist.style.maxHeight = "0px";
+    
+        function menutoggle() {
+          if (menulist.style.maxHeight == "0px") {
+            menulist.style.maxHeight = "100vh";
+          } else {
+            menulist.style.maxHeight = "0px";
+          }
+        }
+      </script>
+
+
+    <section class="home" id="home">
+        <div class="content">
+            <div class="owl-carousel owl-theme">
+                    <div class="items">
+                    <img src="image/banner-1.png" alt="">
+                    <div class="text">
+                        <h1>Spend Your Holiday</h1>
+                        <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.</p>
+                        <div class="flex">
+                            <button class="primary-btn"onclick="location.href='./#about'">READ MORE</button>
+                            <button class="secondary-btn" onclick="location.href='./#contact'">CONTACT US</button>
+                        </div>
+                    </div>
+                </div>
+        <div class="items">
+            <img src="image/banner-2.png" alt="">
+            <div class="text">
+                <h1>Spend Your Holiday</h1>
+                <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.</p>
+                <div class="flex">
+                    <button class="primary-btn">READ MORE</button>
+                    <button class="secondary-btn">CONTACT US</button>
+                </div>
+            </div>
+        </div>
+<div class="items">
+    <img src="image/banner-3.png" alt="">
+    <div class="text">
+        <h1>Spend Your Holiday</h1>
+        <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.</p>
+        <div class="flex">
+            <button class="primary-btn">READ MORE</button>
+            <button class="secondary-btn">CONTACT US</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 0,
+          nav: true,
+          dots: false,
+          navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 1
+            },
+            1000: {
+              items: 1
+            }
+          }
+        })
+    </script>
+
+    <section class="book">
+        <div class="container flex_space">
+            <div class="text">
+                <h1> <span>Book </span> Your Rooms </h1>
+            </div>
+            <div class="form">
+                <div class="grid">
+                    <input type="date" placeholder="Araival Date">
+                    <input type="date" placeholder="Departure Date">
+                    <input type="number" placeholder="Adults">
+                    <input type="number" placeholder="Children">
+                    <input type="submit" value="CHECK AVAILABILITY"> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about top" id="about">
+    <div class="container flex">
+        <div class="left">
+            <div class="heading">
+                <h1>WELCOME</h1>
+                <h2>RKHotel</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas mollitia voluptatibus eos beatae labore unde vitae excepturi officia, inventore deserunt tempore, rem, saepe rerum. Natus iste blanditiis, aliquam nemo maxime at, explicabo ipsam deserunt doloremque, a similique. Ab, porro fuga. Vitae quos porro laboriosam cum aperiam asperiores minima vero eveniet!</p>
+      <button class="primary-btn">ABOUT US</button>
+        </div>
+        <div class="right">
+            <img src="image/about.png" alt="">
+        </div>
+    </div>    
+    </section>
+     
+    <section class="counter top">
+        <div class="container grid">
+            <div class="box">
+                <h1>2332</h1>
+                <hr>
+                <span>Customer</span>
+            </div>
+        <div class="box">
+            <h1>123</h1>
+            <hr>
+            <span>Happy Customer</span>
+        </div>
+    <div class="box">
+        <h1>2250</h1>
+        <hr>
+        <span>Expert Technicians</span>
+    </div>
+<div class="box">
+    <h1>3120</h1>
+    <hr>
+    <span>Desktop Reaired</span>
+</div>
+</div>
+    </section>
+
+    <section class="rooms" id="rooms">
+        <div class="container top">
+            <div class="heading">
+                <h1>EXPLORE</h1>
+                <h2>Our  Rooms</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, eveniet.</p>
+            </div>
+            <div class="content mtop"></div>
+            <div class="owl-carousel owl-carousel1 owl-theme">
+                <div class="items">
+                 <div class="image">
+                    <img src="image/room-1.png" alt="">
+                </div>
+                <div class="text">
+                    <h2>Suporior Rooms</h2>
+                    <div class="rate flex">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</p>
+                <div class="button flex">
+                    <button class="primary-btn">BOOK NOW</button>
+                <h3>$250 <span> <br> Per Night </span></h3>
+            </div>
+        </div>
+    </div>
+
+        <div class="items">
+            <div class="image">
+               <img src="image/room-2.png" alt="">
+           </div>
+           <div class="text">
+               <h2>Suporior Rooms</h2>
+               <div class="rate flex">
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+               <i class="fa fa-star"></i>
+           </div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</p>
+           <div class="button flex">
+               <button class="primary-btn">BOOK NOW</button>
+           <h3>$250 <span> <br> Per Night </span></h3>
+       </div>
+   </div>
+</div>
+   <div class="items">
+    <div class="image">
+       <img src="image/room-3.png" alt="">
+   </div>
+   <div class="text">
+       <h2>Suporior Rooms</h2>
+       <div class="rate flex">
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+   </div>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</p>
+   <div class="button flex">
+       <button class="primary-btn">BOOK NOW</button>
+   <h3>$250 <span> <br> Per Night </span></h3>
+</div>
+</div>
+
+</div>
+<div class="items">
+    <div class="image">
+       <img src="image/room-4.png" alt="">
+   </div>
+   <div class="text">
+       <h2>Suporior Rooms</h2>
+       <div class="rate flex">
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+   </div>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</p>
+   <div class="button flex">
+       <button class="primary-btn">BOOK NOW</button>
+   <h3>$250 <span> <br> Per Night </span></h3>
+</div>
+</div>
+</div>
+
+<div class="items">
+    <div class="image">
+       <img src="image/room-5.png" alt="">
+   </div>
+   <div class="text">
+       <h2>Suporior Rooms</h2>
+       <div class="rate flex">
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+   </div>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</p>
+   <div class="button flex">
+       <button class="primary-btn">BOOK NOW</button>
+   <h3>$250 <span> <br> Per Night </span></h3>
+</div>
+</div>
+</div>
+
+<div class="items">
+    <div class="image">
+       <img src="image/room-6.png" alt="">
+   </div>
+   <div class="text">
+       <h2>Suporior Rooms</h2>
+       <div class="rate flex">
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+   </div>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</p>
+   <div class="button flex">
+       <button class="primary-btn">BOOK NOW</button>
+   <h3>$250 <span> <br> Per Night </span></h3>
+</div>
+</div>
+</div>
+
+<div class="items">
+    <div class="image">
+       <img src="image/room-7.png" alt="">
+   </div>
+   <div class="text">
+       <h2>Suporior Rooms</h2>
+       <div class="rate flex">
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+   </div>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</p>
+   <div class="button flex">
+       <button class="primary-btn">BOOK NOW</button>
+   <h3>$250 <span> <br> Per Night </span></h3>
+</div>
+</div>
+</div>
+<div class="items">
+    <div class="image">
+       <img src="image/room-8.png" alt="">
+   </div>
+   <div class="text">
+       <h2>Suporior Rooms</h2>
+       <div class="rate flex">
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+       <i class="fa fa-star"></i>
+   </div>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</p>
+   <div class="button flex">
+       <button class="primary-btn">BOOK NOW</button>
+   <h3>$250 <span> <br> Per Night </span></h3>
+</div>
+</div>
+ </div>
+
+</div>
+</div>
+    </section>
+    <script>
+        $('.owl-carousel1').owlCarousel({
+          loop: true,
+          margin: 40,
+          nav: true,
+          dots: false,
+          navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 2,
+              margin: 10,
+            },
+            1000: {
+              items: 3
+            }
+          }
+        })
+    </script>
+
+    <section class="gallery" id="pages">
+        <div class="container">
+            <div class="heading">
+                <h1>PHOTOS</h1>
+                <h2>Our Gallery</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</p>
+            </div>
+            </div>
+            <div class="content mtop">
+            <div class="owl-carousel owl-carousel1 owl-theme">
+                    <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-1.png" alt="">
+                    </div>
+                    <div class="overlay">
+                        <span class="fa fa-plus"> </span>
+                        <h3>Photo Title Here.</h3>
+                </div>
+            </div>
+                    <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-2.png" alt="">
+                    </div>
+                    <div class="overlay">
+                        <span class="fa fa-plus"> </span>
+                        <h3>Photo Title Here.</h3>
+                </div>
+            </div>
+                    <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-3.png" alt="">
+                    </div>
+                    <div class="overlay">
+                        <span class="fa fa-plus"> </span>
+                        <h3>Photo Title Here.</h3>
+                </div>
+            </div>
+                    <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-4.png" alt="">
+                    </div>
+                    <div class="overlay">
+                        <span class="fa fa-plus"> </span>
+                        <h3>Photo Title Here.</h3>
+                </div>
+            </div>
+                    <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-5.png" alt="">
+                    </div>
+                    <div class="overlay">
+                        <span class="fa fa-plus"> </span>
+                        <h3>Photo Title Here.</h3>
+                </div>
+            </div>
+                    <div class="items">
+                    <div class="img">
+                        <img src="image/gallery-6.png" alt="">
+                    </div>
+                    <div class="overlay">
+                        <span class="fa fa-plus"> </span>
+                        <h3>Photo Title Here.</h3>
+            </div>
+        </div>
+            <div class="items">
+                <div class="img">
+                    <img src="image/gallery-4.png" alt="">
+                </div>
+                <div class="overlay">
+                    <span class="fa fa-plus"> </span>
+                    <h3>Photo Title Here.</h3>
+        </div>
+    </div>
+        <div class="items">
+            <div class="img">
+                <img src="image/gallery-3.png" alt="">
+            </div>
+            <div class="overlay">
+                <span class="fa fa-plus"> </span>
+                <h3>Photo Title Here.</h3>
+     </div>
+    </div>
+
+     <div class="items">
+        <div class="img">
+            <img src="image/gallery-2.png" alt="">
+        </div>
+        <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+     </div>
+    </div>
+
+        <div class="items">
+        <div class="img">
+        <img src="image/gallery-1.png" alt="">
+     </div>
+        <div class="overlay">
+        <span class="fa fa-plus"> </span>
+        <h3>Photo Title Here.</h3>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+</section>
+    <script>
+        $('.owl-carousel1').owlCarousel({
+          loop: true,
+          margin: 0,
+          nav: true,
+          dots: false,
+          autoplay: true,
+          autoplay: 1000,
+          autoplayHoverPause: true,
+          navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 4,
+            },
+            1000: {
+              items: 6
+            }
+          }
+        })
+    </script>
+
+
+<section class="services top">
+    <div class="container">
+        <div class="heading">
+            <h1>SERVICES</h1>
+            <h2>Our Services</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi quisquam animi, repudiandae provident rerum quibusdam.</p>
+        </div>
+        <div class="content flex_space">
+            <div class="left grid2">
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                        <h3>Delicious Food</h3>
+                    </div>
+                </div>  
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-person-biking"></i>
+                        <h3>Fitness</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-utensils"></i>
+                         <h3>Inhouse Restaurant</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <i class="fa-solid fa-spa"></i>
+                        <h3>Beauty Spa</h3>
+                    </div>
+                </div>   
+
+            </div>
+            <div class="right">
+                <img src="image/service.png" alt="">
+            </div>    
+    </div>
+    </div>
+</section>
+
+<section class="Costumer top">
+    <div class="container">
+        <div class="owl-carousel owl-carousel2 owl-theme">
+            <div class="item">
+                <i class="fa-solid fa-quote-right"></i>
+                <p>Lorem ipsum dolor sit amet consectetur dolorem exercitationem dolores, hic. Ut, sequi voluptate!  commodi autem pariatur, voluptatibus aperiam quod, sed soluta optio similique ea cumque cupiditate quidem maxime nulla nobis voluptate vitae? Blanditiis molestias, ducimus ad officia nemo eveniet ipsum sit doloribus placeat voluptas debitis tempore quae. Aspernatur voluptates odio voluptatibus eaque, fugit neque voluptas omnis tenetur, eveniet recusandae nostrum aliquid doloribus deserunt, unde repudiandae dolorem eos? Ipsam incidunt molestias quo nostrum quis temporibus id? Fugit esse placeat eveniet maiores nisi dignissimos soluta distinctio omnis mollitia voluptate laboriosam, vero ipsa doloremque provident reprehenderit perspiciatis accusamus praesentium dolor quasi culpa rem possimus. Consequuntur.</p>
+                <h3>Julia Robertson</h3>
+                <label>Julia Robertson</label>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-quote-right"></i>
+                <p>Dolor sit amet consectetur citationem esse suscipit voluptatem tempore hic., voluptatibus aperiam quod, sed soluta optio similique ea cumque cupiditate quidem maxime nulla nobis voluptate vitae? Blanditiis molestias, ducimus ad officia nemo eveniet ipsum sit doloribus placeat voluptas debitis tempore quae. Aspernatur voluptates odio voluptatibus eaque, fugit neque voluptas omnis tenetur, eveniet recusandae nostrum aliquid doloribus deserunt, unde repudiandae dolorem eos? Ipsam incidunt molestias quo nostrum quis temporibus id? Fugit esse placeat eveniet maiores nisi dignissimos soluta distinctio omnis mollitia voluptate laboriosam, vero ipsa doloremque provident reprehenderit perspiciatis accusamus praesentium dolor quasi culpa rem possimus. Consequuntur.</p>
+                <h3>Robert Julison</h3>
+                <label>Robert Julison</label>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-quote-right"></i>
+                <p>Nesciunt reiciendis modi exercitationem dolores, cupiditate, nisi distincti esse. Natus sunt deserunt  facere quis, architecto voluptate! Quaerat qui ea fugiat. Adipisci ipsam itaque consequatur mollitia obcaecati commodi autem pariatur, voluptatibus aperiam quod, sed soluta optio similique ea cumque cupiditate quidem maxime nulla nobis voluptate vitae? Blanditiis molestias, ducimus ad officia nemo eveniet ipsum sit doloribus placeat voluptas debitis tempore quae. Aspernatur voluptates odio voluptatibus eaque, fugit neque voluptas omnis tenetur, eveniet recusandae nostrum aliquid doloribus deserunt, unde repudiandae dolorem eos? Ipsam incidunt molestias quo nostrum quis temporibus id? Fugit esse placeat eveniet maiores nisi dignissimos soluta distinctio omnis mollitia voluptate laboriosam, vero ipsa doloremque provident reprehenderit perspiciatis accusamus praesentium dolor quasi culpa rem possimus. Consequuntur.</p>
+                <h3>Julison Roberson</h3>
+                <label>Julison Roberson</label>
+            </div>
+</div>
+    </div>
+</section>
+<script>
+    $('.owl-carousel2').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: true,
+      navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1,
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+</script>
+
+
+<section class="news top rooms" id="news">
+    <div class="container">
+        <div class="heading">
+            <h1>NEWS</h1>
+            <h2>Our News</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ducimus laboriosam! Deserunt at nostrum perferendis.</p>
+        </div>
+        <div class="content flex">
+            <div class="left grid2">
+                <div class="items">
+                    <div class="image">
+                        <img src="image/blog-1.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Finibus bonorum malorm.</h2>
+                        <div class="admin flex">
+                            <i class="fa fa-user"></i>
+                                <label>Admin</label>
+                                <i class="fa fa-heart"></i>
+                                <label>500</label>
+                                <i class="fa fa-comments"></i>
+                        </div>
+                        <p>officiis modi eius facere? Fuga commodi mollitia maxime libero illum quidem debitis atque tempora! accusamus deleniti aut molestias, provident excepturi in.</p>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="image">
+                        <img src="image/blog-1.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Finibus bonorum malorm.</h2>
+                        <div class="admin flex">
+                            <i class="fa fa-user"></i>
+                                <label>Admin</label>
+                                <i class="fa fa-heart"></i>
+                                <label>500</label>
+                                <i class="fa fa-comments"></i>
+                        </div>
+                        <p>officiis modi eius facere? Fuga commodi mollitia maxime libero illum quidem debitis atque tempora! accusamus deleniti aut molestias, provident excepturi in.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+            <div class="box flex">
+                <div class="img">
+                    <img src="image/blog-s1.png" alt="">
+            </div>
+                <div class="stext">
+                    <h2>Etiam Vel Nequi</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, facilis.</p>
+
+                </div>
+            </div>
+                <div class="box flex">
+                    <div class="img">
+                        <img src="image/blog-s2.png" alt="">
+                    </div>
+                    <div class="stext">
+                        <h2>Etiam Vel Nequi</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, facilis.</p>
+                    </div>
+                    </div>
+                    <div class="box flex">
+                        <div class="img">
+                            <img src="image/blog-s3.png" alt="">
+                        </div>
+                        <div class="stext">
+                            <h2>Etiam Vel Nequi</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, facilis.</p>
+                        </div>
+                        </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter mtop">
+    <div class="container flex_space">
+        <h1>Subscribe to Our Newsletter</h1>
+        <input type="text" placeholder="Your Email">
+        <input type="text" value="Subscribe">
+
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container grid">
+        <div class="box">
+            <img src="image/rkhotel-high-resolution-logo-black-transparent (2).png" alt="">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti accusantium, blanditiis minima repellendus quas expedita est minus fuga exercitationem nihil aperiam possimus provident dolor ipsum harum totam odio accusamus eius et nostrum! Vero, porro explicabo! Reprehenderit ratione aspernatur dolor, at accusantium deleniti cum, alias mollitia minima maxime animi eum expedita vero, ut consequatur atque numquam quibusdam rerum nemo harum neque dignissimos. Minima modi similique explicabo pariatur earum soluta quam deserunt, placeat, maiores perspiciatis quasi eaque eveniet. Nemo odio eius aut recusandae, ea aliquam necessitatibus, natus dolor iusto nulla eveniet fugiat corrupti in quod nesciunt. Voluptatem facilis tempore quaerat tempora!</p>
+            <div class="icon">
+                <i class="fa-brands fa-facebook-f"></i>     
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+        <div class="box">
+            <h2>Links</h2>
+            <ul>
+                <li>Company History</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Services</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Contasct Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente obcaecati quibusdam non asperiores corporis ex?</p>
+            <i class="fa fa-location-dot"></i>
+            <label>1201 park street, Avenue, Dhanmondy, Dhaka. </label> <br>
+            <i class="fa fa-phone"></i>
+            <label>[88] 652 321 442</label> <br>
+            <i class="fa fa-envelope"></i>
+            <label>info@dentar.com</label> <br>
+        </div>
+    </div>
+</footer>
+<div class="legal">
+    <p class="container">Copyright (c) 2024 Copyright Holder All Rights Reserved.</p>
+</div>
+</body>
+</html>
